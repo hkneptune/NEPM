@@ -7,13 +7,13 @@ module.exports = (sequelize, Sequelize) => {
       primaryKey: true,
       type: Sequelize.INTEGER
     },
-    uuid: {
-      type: Sequelize.UUID,
-      defaultValue: Sequelize.UUIDV4,
-      allowNull: false,
-      notEmpty: true,
-      unique: true
-    },
+    // uuid: {
+    //   type: Sequelize.UUID,
+    //   defaultValue: Sequelize.UUIDV4,
+    //   allowNull: false,
+    //   notEmpty: true,
+    //   unique: true
+    // },
     first_name: {
       type: Sequelize.STRING,
       notEmpty: true,
@@ -31,7 +31,7 @@ module.exports = (sequelize, Sequelize) => {
       }
     },
     username: {
-      type: Sequelize.STRING,
+      type: Sequelize.STRING(32),
       allowNull: false,
       notEmpty: true,
       unique: true,
@@ -40,7 +40,7 @@ module.exports = (sequelize, Sequelize) => {
       }
     },
     email: {
-      type: Sequelize.STRING,
+      type: Sequelize.STRING(128),
       allowNull: false,
       unique: true,
       validate: {
