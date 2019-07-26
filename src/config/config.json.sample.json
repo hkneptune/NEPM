@@ -4,6 +4,7 @@
     "password": "DB_PASSWORD",
     "database": "DB_DATABASE",
     "host": "DB_HOSTNAME",
+    "port": 3306,
     "dialect": "mysql"
   },
   "test": {
@@ -11,6 +12,7 @@
     "password": "DB_PASSWORD",
     "database": "DB_DATABASE",
     "host": "DB_HOSTNAME",
+    "port": 1433,
     "dialect": "mysql"
   },
   "production": {
@@ -18,6 +20,7 @@
     "password": "DB_PASSWORD",
     "database": "DB_DATABASE",
     "host": "DB_HOSTNAME",
+    "port": 1521,
     "dialect": "mysql"
   }
 }
