@@ -1,19 +1,22 @@
 module.exports = (sequelize, Sequelize) => {
 
-  let Users = sequelize.define('sg_users', {
+  let Users = sequelize.define('users', {
 
     id: {
       autoIncrement: true,
       primaryKey: true,
-      type: Sequelize.INTEGER
+      type: Sequelize.INTEGER,
+      allowNull: false,
+      notEmpty: true,
+      unique: true
     },
-    // uuid: {
-    //   type: Sequelize.UUID,
-    //   defaultValue: Sequelize.UUIDV4,
-    //   allowNull: false,
-    //   notEmpty: true,
-    //   unique: true
-    // },
+    uuid: {
+      type: Sequelize.UUID,
+      defaultValue: Sequelize.UUIDV4,
+      allowNull: false,
+      notEmpty: true,
+      unique: true
+    },
     first_name: {
       type: Sequelize.STRING,
       notEmpty: true,
@@ -30,24 +33,13 @@ module.exports = (sequelize, Sequelize) => {
         len: [1, 128]
       }
     },
-    username: {
-      type: Sequelize.STRING(32),
-      allowNull: false,
-      notEmpty: true,
-      unique: true,
-      validate: {
-        len: [6, 32]
-      }
-    },
     email: {
       type: Sequelize.STRING(128),
       allowNull: false,
       unique: true,
       validate: {
         isEmail: true,
-        validate: {
-          len: [6, 64]
-        }
+        len: [6, 64]
       }
     },
     password: {
