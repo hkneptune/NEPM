@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "N/A",
   "main": "src/app.js",
-  "author": "Neptune LI <neptune.li@ha.org.hk>",
-  "license": "Copyright",
+  "author": "Neptune LI <hkneptune@gmail.com>",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "serve": "nodemon src/app.js"
