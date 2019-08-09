@@ -22,7 +22,8 @@ app.use(bodyParser.json())
 app.use(session({
   secret: 'This is a secret used in session',
   resave: true,
-  cookie: { maxAge: 30000 }, // 30 seconds
+  rolling: true,
+  cookie: { maxAge: 10000 }, // 10 seconds
   saveUninitialized: true })); // Session secret
 app.use(passport.initialize());
 app.use(passport.session()); // Persistent login sessions
