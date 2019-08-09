@@ -12,7 +12,7 @@
     "password": "DB_PASSWORD",
     "database": "DB_DATABASE",
     "host": "DB_HOSTNAME",
-    "port": 1433,
+    "port": 3306,
     "dialect": "mysql"
   },
   "production": {
@@ -20,7 +20,7 @@
     "password": "DB_PASSWORD",
     "database": "DB_DATABASE",
     "host": "DB_HOSTNAME",
-    "port": 1521,
+    "port": 3306,
     "dialect": "mysql"
   }
 }
