@@ -11,7 +11,7 @@ const db = {};
 
 fs.readdirSync(__dirname).filter((file) => {
 
-  return (file.indexOf(".") !== 0) && (file !== "index.js")
+  return (file.indexOf(".") !== 0) && (file !== "index.js") && (file.includes(".sqlz."))
 
 }).forEach((file) => {
 
